@@ -24,14 +24,14 @@
 
 
 * We can represent an edge `e ∈ E` as a two-element subset of `V: e = {u, v}`.
-  * `u` and `v` are two nodes connected by `e`. `u` and `v` are also called the `ends` of `e`.
+  * `u` and `v` are two nodes connected by `e`. `u` and `v` are also called the **ends** of `e`.
 
   ​
 
 
 ### Paths and Connectivity in Graphs
 
-* A **path** in an *undirected* graph `G = (V,E)` (where V = set of all vertices, and E = set of all edges) is a sequence `P` of nodes `v_1, v_2, ... v_k` where every consecutive pair `v_i`, `v_i+1` is joined by an edge. 
+* A **path** in an *undirected* graph `G = (V,E)` (where `V` = set of all vertices, and `E` = set of all edges) is a sequence `P` of nodes `v_1, v_2, ... v_k` where every consecutive pair `v_i`, `v_i+1` is joined by an edge. 
 
 * For example, in the picture below, `3,2,1,7,9` forms a path, whereas `3,4,6` does not.
 
@@ -41,7 +41,7 @@
 
 * A path in a *directed* graph is slightly different - there can be a path from node `u` to node `v` but not from `v` to `u`.
 
-  * A directed graph is called **strongly connected** if every path is reversible; that is, for any two nodes `a`, `b` in the graph, there is a path from `a` to `b` and from `b` to `a`.
+  * A directed graph is called **strongly connected** if every path is reversible; that is, for any two nodes `u`, `v` in the graph, there is a path from `u` to `v` and from `v` to `u`.
 
 * The **distance** between two nodes `u` and `v` is the minimum number of edges in a path connecting `u` and `v`.
 
