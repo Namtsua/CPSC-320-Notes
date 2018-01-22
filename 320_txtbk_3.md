@@ -12,8 +12,6 @@
 
 
 
-
-
 * Each edge connects two nodes, either in one direction or two directions.
   * A graph that goes in both directions is called an **undirected** (or **symmetric**) graph.
   * If a graph goes in one direction, it is called a **directed** (or **asymmetric**) graph.
