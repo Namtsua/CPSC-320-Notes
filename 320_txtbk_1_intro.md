@@ -70,7 +70,7 @@
   * Return the set S of engaged pairs.
   ```
 
-* One property of the GS algorithm, is that it terminates after *at most* `n^2` iterations of the `While` loop (i.e., **the algorithm has worst-case runtime `O(n^2)`**).
+* One property of the GS algorithm, is that it terminates after *at most* `n^2` iterations of the `While` loop (i.e. **the algorithm has worst-case runtime `O(n^2)`**).
 
   * When proving the **upper-bound runtimes** of algorithms, a useful strategy is to find a measure of *progress*. 
     * By progress, we maen we want some precise way of saying that each step taken by the algorithm *must* bring it closer to termination.
