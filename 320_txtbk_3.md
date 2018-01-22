@@ -31,7 +31,7 @@
   ​
 
 
-###Paths and Connectivity in Graphs
+### Paths and Connectivity in Graphs
 
 * A **path** in an *undirected* graph `G = (V,E)` (where V = set of all vertices, and E = set of all edges) is a sequence `P` of nodes `v_1, v_2, ... v_k` where every consecutive pair `v_i`, `v_i+1` is joined by an edge. 
 
@@ -63,14 +63,14 @@
 
 ## 3.2 Graph Connectivity and Graph Traversal
 
-###What is graph connectivity?
+### What is graph connectivity?
 
 * The **degree** of a node `v` is the number of nodes that `v` is adjacent to (i.e. the number of edges from `v` to other nodes in the graph).
 * Given a graph `G` and two nodes `s` and `t`, we want to find an algorithm to efficiently determine if there is a path from `s` to `t`. This is called the problem of determining **`s-t` connectivity**
 
 
 
-###Breadth-first search
+### Breadth-first search
 
 * **Breadth-first search (BFS)** is an algorithm in which we explore outward from `s` in all possible directions, visiting nodes in order of distance, i.e. in **layers**. 
 
@@ -88,7 +88,7 @@
 
   ​
 
-###Depth-first search
+### Depth-first search
 
 * **Depth-first search** involves repeatedly following the first unseen edge you find, until you reach a dead-end, at which point you backtrack and try again from another unseen edge (imagine finding your way through a maze, when you reach a dead-end you go back and try the closest path you haven't been through yet).
 
@@ -110,7 +110,9 @@
 
 
 
-###Representing Graphs
+
+
+### Representing Graphs
 
 * Graphs can either be represented using an **adjacency matrix** or an **adjacency list**.
 * Consider a graph `G = (V,E)`. Let `n = |V|` (the number of nodes), and let `m = |E|`, (the number of edges).
@@ -119,6 +121,8 @@
   * However, this can make things unclear; for example, is `O(m^2)` a better runtime than `O(n^3)`? It depends on what the actual values are for `m` and `n`.
   * For this reason, running times will generally be denoted in terms of both `m` and `n`.
     * For example, a *linear* runtime would be `O(m + n)`.
+
+    ​
 
 
 
@@ -131,6 +135,8 @@
     1. The representation takes **`θ(n^2)` space**. If the graph has few edges, then a lot of space is wasted containing zeroes.
     2. Checking all edges incident to a given node `v` involves checking `A[v,w]` for every single other node `w` in the graph, which takes **`θ(n)` time**. 
 
+    ​
+
 
 
 ##### Adjacency Lists
@@ -142,10 +148,14 @@
 
 
 
+
+
 ##### Comparing adjacency lists and adjacency matrices
 
 * An adjacency matrix requires `O(n^2)` space, whereas the adjacency list requires `O(m + n)` space. This means that an adjacency list representation performs much better when the number of edges `m` is small relative to the number of nodes`n`. 
 * Checking whether an edge `e = (u,v)` is in an adjacency matrix takes `O(1)` time, whereas checking whether `e` is in an adjacency list takes `O(n_u)` time, where `n_u` is the *degree* of node `u`. 
+
+
 
 
 
@@ -155,9 +165,11 @@
 
 * A **stack** is a set from which elements are removed in a **last in, first out (LIFO)** order - the most recently added element is removed first.
 
-  ![3_stack_vs_queue](/Users/vaibhav/Documents/School/2017-W2/320/textbook_notes/images/3_stack_vs_queue.jpg)
+  ![3_stack_vs_queue](images/3_stack_vs_queue.jpg)
 
 * Both stacks and queues can easily be implemented using a *doubly linked list*.
+
+
 
 
 
@@ -195,6 +207,8 @@
 
 
 
+
+
 ### Implementing Depth-First Search
 
 * The **DFS algorithm** is as follows:
@@ -221,6 +235,8 @@
     * Let `n_v` denote the degree of node `v`. Node `v` will get added to the stack `S` every time one of its `n_v` adjacent nodes is explored, so the total number of nodes added to `S` is at most `2m `(don't ask me where this number comes from, I have no clue ¯\\\_(ツ)_/¯ ).
     * This proves the bound on the runtime of DFS is `O(m + n)`.
 
+  ​
+
 
 
 ### Finding the Set of All Connected Components
@@ -237,13 +253,15 @@
 
 * a **bipartite graph** is one where the node set `V` can be partitioned into sets `X` and `Y` in such a way that every edge has one end in `X` and the  other end in `Y`.
 
-  ![3_bipartite_graph](/Users/vaibhav/Documents/School/2017-W2/320/textbook_notes/images/3_bipartite_graph.png)
+  ![3_bipartite_graph](images/3_bipartite_graph.png)
 
 * We could also define bipartiteness in terms of colours: for example, all nodes in `X` are coloured purple, and all nodes in `Y` are green. 
 
   * Then, the graph is bipartite if every edge in the graph has one purple end and one green end.
 
 * If a graph `G` is bipartite, then it cannot contain an odd cycle (i.e., a cycle containing 3, 5, 7,… nodes).
+
+
 
 
 
@@ -265,7 +283,7 @@
 
 ## 3.5 Connectivity in Directed Graphs
 
-###Representing Directed Graphs
+### Representing Directed Graphs
 
 * We can represent directed graphs using a version of the adjacency list representation:
   * Instead of each node having a single list of neighbours, each node has two lists associated with it:
