@@ -1,7 +1,9 @@
 # CPSC-320-Notes
 Markdown notes for CPSC 320 - taken in 2018W2
 
-Table of contents (click to follow to the github page for each chapter):
+---
+
+##Table of contents (click to follow to the github page for each chapter):
 
 * [Introduction - Some Representative Problems](https://github.com/Vaibhav-Sokhi/CPSC-320-Notes/blob/master/320_txtbk_1_intro.md)
   1. [A First Problem - Stable Matching](https://github.com/Vaibhav-Sokhi/CPSC-320-Notes/blob/master/320_txtbk_1_intro.md#11-a-first-problem-stable-matching)
