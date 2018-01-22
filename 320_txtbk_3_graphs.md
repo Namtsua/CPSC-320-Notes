@@ -324,3 +324,9 @@
     > For any two nodes `s` and `t` in a directed graph, their strong components are either identical or disjoint.
 
   * It is possible to compute the strong components for all nodes in a total time of `O(m + n)`.
+
+---
+
+## 3.6 Directed Acyclic Graphs and Topological Ordering
+
+TODO
