@@ -4,7 +4,7 @@
 
 ## 3.1 Basic Definitions and Applications
 
-###What are graphs?
+### What are graphs?
 
 * A graph consists of a collection `V` of **vertices**(or **nodes**), and a collection `E` of **edges**. 
 
